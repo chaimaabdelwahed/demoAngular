@@ -1,0 +1,10 @@
+<p>client works!</p>
+<div>{{clients}}</div>
+<table class="table table-bordered" >
+  <tr *ngFor="let client of clients" [ngClass]="{'table-success':client.ville!=null ,'table-danger':client.ville==null}">
+    <td>{{client.name}}</td>
+    <td ><div *ngIf="client.ville!=null">3andou</div><div *ngIf="client.ville==null">ma3andou</div></td>
+    <td>{{client.ville!=null?client.ville:'mafammach'}}</td>
+  </tr>
+</table>
+<button (click)="otVille()"> click</button>
